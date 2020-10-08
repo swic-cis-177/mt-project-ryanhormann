@@ -1,20 +1,35 @@
-<!DOCTYPE html>
+A<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css">
-
-    <!-- TODO: Add some Google Fonts -->
-
     <link rel="stylesheet" href="style.css">
-
-    <!-- TODO: Update '<title>'. -->
-    <title>Document</title>
+    <title>MT Project</title>
   </head>
   <body>
-    <!-- 'Connect' JS to this HTML file. -->
-    <script src="./scripts.js"></script>
+    <h1>Calorie Tracker</h1>
+    <p id="tooltip-help">Hover over the equation for tool tips!</p>
+
+    <form>
+      <div id="calories">
+        <div id="calories-available">2000<span id="calories-available-tooltip">Calories Available</span></div> - <div id="calories-used">0<span id="calories-used-tooltip">Calories Used</span></div> = <div id="calories-left">2000<span id="calories-left-tooltip">Calories Left</span></div>
+      </div>
+
+      <label for="breakfast">Breakfast</label>
+      <input id="breakfast" type="text" name="breakfast">
+      <br>
+      <label for="lunch">Lunch</label>
+      <input id="lunch" type="text" name="lunch">
+      <br>
+      <label for="dinner">Dinner</label>
+      <input id="dinner" type="text" name="dinner">
+      <br>
+      <div id="submit-button-wrapper">
+        <input type="submit" value="Update" id="update-btn">
+      </div>
+    </form>
+    <script src="scripts.js"></script>
   </body>
 </html>
+
