@@ -1,4 +1,5 @@
 const form = document.querySelector("form");
+const caloriesUsedLabel = document.querySelector("#calories-used");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -16,4 +17,6 @@ form.addEventListener("submit", (e) => {
   }
   console.log(caloriesUsed);
   console.log(totalCaloriesUsed);
+
+  caloriesUsedLabel.textContent = totalCaloriesUsed;
 });

@@ -14,12 +14,6 @@ h1 {
   text-align: center;
 }
 
-#tooltip-help {
-  font-size: 30px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
 form {
   background-color: #f7f7f7;
   border-radius: 10px;
@@ -82,42 +76,4 @@ input[name="lunch"] {
   font-family: monospace;
   position: relative;
   width: 65.987px;
-}
-
-#calories-available #calories-available-tooltip,
-#calories-used #calories-used-tooltip,
-#calories-left #calories-left-tooltip {
-  background-color: #262626;
-  border-radius: 6px;
-  bottom: 100%;
-  color: #fff;
-  cursor: default;
-  font-size: 16px;
-  left: 50%;
-  padding: 2px 0;
-  position: absolute;
-  text-align: center;
-  transform: translateX(-50%);
-  visibility: hidden;
-  width: 150px;
-  z-index: 1;
-}
-
-#calories-available #calories-available-tooltip::after,
-#calories-used #calories-used-tooltip::after,
-#calories-left #calories-left-tooltip::after {
-  border-color: #262626 transparent transparent transparent;
-  border-style: solid;
-  border-width: 5px;
-  content: "";
-  left: 50%;
-  margin-left: -5px;
-  position: absolute;
-  top: 100%;
-}
-
-#calories-left:hover #calories-left-tooltip,
-#calories-used:hover #calories-used-tooltip,
-#calories-available:hover #calories-available-tooltip {
-  visibility: visible;
 }
