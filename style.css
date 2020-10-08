@@ -50,12 +50,13 @@ input[name="lunch"] {
   margin: 60px 0;
 }
 
-input[type="submit"] {
+#update-btn {
   border-radius: 5px;
   cursor: pointer;
   font-size: 20px;
   height: 28px;
   margin-top: 25px;
+  padding: 0 10px;
 }
 
 #submit-button-wrapper {
