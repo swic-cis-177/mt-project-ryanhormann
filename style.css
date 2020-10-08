@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 30px;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 30px 0 10px 0;
+  text-align: center;
+}
+
+#tooltip-help {
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+form {
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 2px grey;
+  left: 50%;
+  padding: 25px;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+label {
+  display: inline-block;
+  width: 150px;
+}
+
+input {
+  height: 34.4px;
+  width: 150px;
+}
+
+input[type="text"] {
+  border-radius: 5px;
+  font-size: 25px;
+  text-align: center;
+}
+
+input[name="lunch"] {
+  margin: 60px 0;
+}
+
+input[type="submit"] {
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  height: 28px;
+  margin-top: 25px;
+}
+
+#submit-button-wrapper {
+  text-align: center;
+}
+
+#calories {
+  background-color: #fff;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: default;
+  margin-bottom: 25px;
+  padding: 3px;
+  text-align: center;
+}
+
+#calories-available,
+#calories-used,
+#calories-left {
+  border-bottom: 1px solid black;
+  cursor: default;
+  display: inline-block;
+  font-family: monospace;
+  position: relative;
+  width: 65.987px;
+}
+
+#calories-available #calories-available-tooltip,
+#calories-used #calories-used-tooltip,
+#calories-left #calories-left-tooltip {
+  background-color: #262626;
+  border-radius: 6px;
+  bottom: 100%;
+  color: #fff;
+  cursor: default;
+  font-size: 16px;
+  left: 50%;
+  padding: 2px 0;
+  position: absolute;
+  text-align: center;
+  transform: translateX(-50%);
+  visibility: hidden;
+  width: 150px;
+  z-index: 1;
+}
+
+#calories-available #calories-available-tooltip::after,
+#calories-used #calories-used-tooltip::after,
+#calories-left #calories-left-tooltip::after {
+  border-color: #262626 transparent transparent transparent;
+  border-style: solid;
+  border-width: 5px;
+  content: "";
+  left: 50%;
+  margin-left: -5px;
+  position: absolute;
+  top: 100%;
+}
+
+#calories-left:hover #calories-left-tooltip,
+#calories-used:hover #calories-used-tooltip,
+#calories-available:hover #calories-available-tooltip {
+  visibility: visible;
+}
