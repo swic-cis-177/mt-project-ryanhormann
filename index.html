@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>MT Project</title>
   </head>
   <body>
@@ -12,18 +15,27 @@
 
     <form>
       <div id="calories">
-        <div id="calories-available">2000</div> - <div id="calories-used">0</div> = <div id="calories-left">2000</div>
+        <div id="calories-available">2000</div>
+        -
+        <div id="calories-used">0</div>
+        =
+        <div id="calories-left">2000</div>
       </div>
 
       <label for="breakfast">Breakfast</label>
-      <input id="breakfast" type="text" name="breakfast" value="0">
-      <br>
+
+      <!-- Using 'text' type here instead of 'number' b/c we don't need the 'clicky' buttons. -->
+      <input id="breakfast" type="text" name="breakfast" value="0" />
+      <!-- TODO{ryan.hormann}: Avoid using 'br'
+      https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br
+      -->
+      <br />
       <label for="lunch">Lunch</label>
-      <input id="lunch" type="text" name="lunch" value="0">
-      <br>
+      <input id="lunch" type="text" name="lunch" value="0" />
+      <br />
       <label for="dinner">Dinner</label>
-      <input id="dinner" type="text" name="dinner" value="0">
-      <br>
+      <input id="dinner" type="text" name="dinner" value="0" />
+      <br />
       <div id="submit-button-wrapper">
         <button id="update-btn">Update</button>
       </div>
@@ -31,4 +43,3 @@
     <script src="scripts.js"></script>
   </body>
 </html>
-
