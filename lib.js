@@ -67,5 +67,5 @@ export const addCalories = () => {
   const averageCal = totalCal / tds.length;
 
   totalLabel.textContent = `Weekly Total: ${totalCal}`;
-  averageLabel.textContent = `Daily Average: ${averageCal}`;
+  averageLabel.textContent = `Daily Average: ${averageCal.toFixed(0)}`;
 };
