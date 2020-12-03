@@ -19,9 +19,9 @@ form {
   border-radius: 10px;
   box-shadow: 0 5px 10px 2px grey;
   left: 50%;
+  margin: auto;
   padding: 25px;
-  position: absolute;
-  transform: translateX(-50%);
+  width: 360px;
 }
 
 label {
@@ -63,4 +63,10 @@ input[name="lunch"] {
   font-family: monospace;
   position: relative;
   width: 65.987px;
+}
+
+table {
+  border: 3px solid black;
+  margin: 0 auto;
+  margin-top: 50px;
 }
