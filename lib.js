@@ -3,6 +3,7 @@ const caloriesLeftLabel = document.querySelector("#calories-left");
 const form = document.querySelector("form");
 const inputs = document.querySelectorAll("input");
 const tds = document.querySelectorAll("td");
+const totalLabel = document.querySelector("#totalLabel");
 
 // I added 1 to this so that it starts with monday, so monday has a value of 1, tuesday has a value of 2, etc.
 const getDayOfWeek = new Date(Date.now()).getDate() + 1;
@@ -49,4 +50,18 @@ export const addCalories = () => {
       tds[6].textContent = totalCaloriesUsed;
       break;
   }
+
+  // TODO do total and average and display in labels.
+  const weeklyTotal = [];
+
+  for (let x = 0; x < tds.length; x++) {
+    weeklyTotal.push(tds[x].textContent);
+  }
+
+  const totalCal = weeklyTotal.reduce(
+    (total, current) => total + Number(current),
+    0
+  );
+
+  totalLabel.textContent = `Weekly Total: ${totalCal}`;
 };
