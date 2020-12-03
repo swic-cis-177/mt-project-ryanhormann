@@ -28,27 +28,42 @@ export const addCalories = () => {
     document.querySelector("#calories").style.backgroundColor = "#f7f7f7";
   }
 
+  const moreThan2k = (day) => {
+    if (totalCaloriesUsed > 2000) {
+      tds[day].style.backgroundColor = "#ff837a";
+    } else {
+      tds[day].style.backgroundColor = "#7aff92";
+    }
+  };
+
   switch (getDayOfWeek) {
     case 1:
       tds[0].textContent = totalCaloriesUsed;
+      moreThan2k(0);
       break;
     case 2:
       tds[1].textContent = totalCaloriesUsed;
+      moreThan2k(1);
       break;
     case 3:
       tds[2].textContent = totalCaloriesUsed;
+      moreThan2k(2);
       break;
     case 4:
       tds[3].textContent = totalCaloriesUsed;
+      moreThan2k(3);
       break;
     case 5:
       tds[4].textContent = totalCaloriesUsed;
+      moreThan2k(4);
       break;
     case 6:
       tds[5].textContent = totalCaloriesUsed;
+      moreThan2k(5);
       break;
     case 7:
       tds[6].textContent = totalCaloriesUsed;
+      moreThan2k(6);
       break;
   }
 
