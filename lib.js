@@ -4,6 +4,7 @@ const form = document.querySelector("form");
 const inputs = document.querySelectorAll("input");
 const tds = document.querySelectorAll("td");
 const totalLabel = document.querySelector("#totalLabel");
+const averageLabel = document.querySelector("#averageLabel");
 
 // I added 1 to this so that it starts with monday, so monday has a value of 1, tuesday has a value of 2, etc.
 const getDayOfWeek = new Date(Date.now()).getDate() + 1;
@@ -63,5 +64,8 @@ export const addCalories = () => {
     0
   );
 
+  const averageCal = totalCal / tds.length;
+
   totalLabel.textContent = `Weekly Total: ${totalCal}`;
+  averageLabel.textContent = `Daily Average: ${averageCal}`;
 };
