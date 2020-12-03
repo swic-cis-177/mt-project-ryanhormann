@@ -96,3 +96,20 @@ td {
 tr {
   height: 50px;
 }
+
+#totalLabel,
+#averageLabel {
+  display: inline-block;
+}
+
+#totalLabel {
+  margin-right: 100px;
+}
+
+#statsContainer {
+  display: inline-block;
+  left: 50%;
+  margin-top: 25px;
+  position: relative;
+  transform: translateX(-50%);
+}
