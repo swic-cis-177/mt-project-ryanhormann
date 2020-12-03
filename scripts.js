@@ -1,5 +1,14 @@
-const form = document.querySelector("form");
-const caloriesUsedLabel = document.querySelector("#calories-used");
+import { addCalories } from "./lib.js";
+
+const inputs = document.querySelectorAll("input");
+
+for (let i = 0; i < inputs.length; i++) {
+  inputs[i].addEventListener("input", function () {
+    addCalories();
+  });
+}
+
+/*const caloriesUsedLabel = document.querySelector("#calories-used");
 const caloriesLeftLabel = document.querySelector("#calories-left");
 
 form.addEventListener("submit", (e) => {
@@ -22,4 +31,4 @@ form.addEventListener("submit", (e) => {
   caloriesUsedLabel.textContent = totalCaloriesUsed;
 
   caloriesLeftLabel.textContent = 2000 - totalCaloriesUsed;
-});
+});*/
