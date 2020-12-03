@@ -8,7 +8,6 @@ const tds = document.querySelectorAll("td");
 const getDayOfWeek = new Date(Date.now()).getDate() + 1;
 
 export const addCalories = () => {
-  // TODO: add number from inputs to the correct day in the table
   const caloriesUsed = {};
   let totalCaloriesUsed = 0;
 
@@ -23,11 +22,13 @@ export const addCalories = () => {
   // Turn equation red if you eat more than 2k cal
   if (caloriesLeftLabel.textContent < 0) {
     document.querySelector("#calories").style.backgroundColor = "#ff837a";
+  } else {
+    document.querySelector("#calories").style.backgroundColor = "#f7f7f7";
   }
 
   switch (getDayOfWeek) {
     case 1:
-      tds[0].textContent = caloriesUsed;
+      tds[0].textContent = totalCaloriesUsed;
       break;
     case 2:
       tds[1].textContent = totalCaloriesUsed;
